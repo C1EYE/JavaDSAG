@@ -8,18 +8,28 @@ import com.mj.排序.cmp.*;
 import java.util.Arrays;
 
 @SuppressWarnings({"rawtypes", "unchecked"})
-public class Main {
-    public static void main(String[] args) {
+public class Main
+{
+    public static void main(String[] args)
+    {
         Integer[] array = ArrayUtil.random(10000, 1, 100);
 
-        testSorts(array, new BubbleSort(), new SelectionSort(),
-                new HeapSort(), new InsertSort(), new InsertSort3());
+        testSorts(array,
+                    new BubbleSort(), new SelectionSort(), new InsertSort(), new InsertSort3(),
+                    new HeapSort(), new MergeSort(), new QuickSort(),
+                    new ShellSort(),
+                    new CountingSort(),
+                    new CountingSort2(),
+                    new RadixSort()
+                 );
 
     }
 
 
-    static void testSorts(Integer[] array, Sort... sorts) {
-        for (Sort sort : sorts) {
+    static void testSorts(Integer[] array, Sort... sorts)
+    {
+        for (Sort sort : sorts)
+        {
             Integer[] copy = ArrayUtil.copy(array);
             sort.sort(copy);
             Assert.test(ArrayUtil.isAscOrder(copy));

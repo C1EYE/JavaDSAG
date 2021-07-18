@@ -8,7 +8,7 @@ public class HeapSort<E extends Comparable<E>> extends Sort<E> {
     @Override
     protected void sort() {
         heapSize = array.length;
-        //原地建堆
+//        原地建堆
         for (int i = (heapSize >> 1) - 1; i >= 0; i--) {
             siftDown(i);
         }
@@ -45,4 +45,5 @@ public class HeapSort<E extends Comparable<E>> extends Sort<E> {
         }
         array[index] = element;
     }
+
 }

@@ -18,5 +18,6 @@ public class InsertSort<E extends Comparable<E>> extends Sort<E> {
             array[cur] = e;
         }
 
+
     }
 }

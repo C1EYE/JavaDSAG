@@ -57,7 +57,7 @@ public class ListSet<E> implements Set<E> {
 
         stringListSet.traversal(new Visitor<String>() {
             @Override
-            boolean visit(String element) {
+            public boolean visit(String element) {
                 System.out.println(element);
                 return false;
             }

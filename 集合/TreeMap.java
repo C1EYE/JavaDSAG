@@ -21,14 +21,17 @@ public class TreeMap<K, V> implements Map<K, V> {
         this.comparator = comparator;
     }
 
+    @Override
     public int size() {
         return size;
     }
 
+    @Override
     public boolean isEmpty() {
         return size == 0;
     }
 
+    @Override
     public void clear() {
         root = null;
         size = 0;
